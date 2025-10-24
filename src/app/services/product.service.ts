@@ -38,16 +38,9 @@ export class ProductService {
       description: 'Professional mirrorless camera',
       fullDescription: 'Capture stunning photos and 4K videos with this professional-grade camera. 24MP sensor, image stabilization, and interchangeable lens system.'
     },
+    
     {
       id: 5,
-      name: 'Bluetooth Speaker',
-      price: 149.99,
-      image: 'https://images.pexels.com/photos/1279406/pexels-photo-1279406.jpeg?auto=compress&cs=tinysrgb&w=800',
-      description: 'Portable wireless speaker with deep bass',
-      fullDescription: 'Enjoy 360-degree sound with this waterproof portable speaker. 12-hour battery life, powerful bass, and connect multiple speakers for immersive audio.'
-    },
-    {
-      id: 6,
       name: 'Gaming Console',
       price: 499.99,
       image: 'https://images.pexels.com/photos/371924/pexels-photo-371924.jpeg?auto=compress&cs=tinysrgb&w=800',

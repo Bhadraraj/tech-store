@@ -6,14 +6,12 @@ const { MongoClient, ObjectId } = require('mongodb');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// MongoDB Atlas connection
 const mongoUri = "mongodb+srv://apiuser:bhdgarfara12gse@techstack.reyftoo.mongodb.net/?retryWrites=true&w=majority&appName=TechStack";
 
 const client = new MongoClient(mongoUri);
 let db;
 let enquiriesCollection;
 
-// Connect to MongoDB
 async function connectDB() {
   try {
     console.log('Attempting to connect to MongoDB...');

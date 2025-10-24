@@ -22,33 +22,46 @@ import { RouterLink } from '@angular/router';
   `,
   styles: [`
     .home-container {
-      min-height: calc(100vh - 70px);
+      min-height: 100vh;
+      width: 100%;
+      overflow-x: hidden;
     }
 
     .hero {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
-      padding: 8rem 2rem;
+      padding: 6rem 1rem;
       text-align: center;
+      width: 100%;
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .hero-content {
       max-width: 800px;
       margin: 0 auto;
+      width: 100%;
+      padding: 0 1rem;
     }
 
     .hero-title {
-      font-size: 3.5rem;
+      font-size: clamp(1.75rem, 5vw, 3.5rem);
       font-weight: 700;
       margin-bottom: 1rem;
       animation: fadeInUp 0.8s ease;
+      line-height: 1.2;
+      word-wrap: break-word;
     }
 
     .hero-subtitle {
-      font-size: 1.5rem;
+      font-size: clamp(0.95rem, 3vw, 1.5rem);
       margin-bottom: 2rem;
       opacity: 0.95;
       animation: fadeInUp 0.8s ease 0.2s backwards;
+      line-height: 1.5;
+      padding: 0 1rem;
     }
 
     .hero-buttons {
@@ -60,12 +73,14 @@ import { RouterLink } from '@angular/router';
     }
 
     .btn {
-      padding: 1rem 2rem;
+      padding: 0.875rem 1.75rem;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
       display: inline-block;
+      text-align: center;
+      font-size: 1rem;
     }
 
     .btn-primary {
@@ -105,12 +120,38 @@ import { RouterLink } from '@angular/router';
         padding: 4rem 1rem;
       }
 
-      .hero-title {
-        font-size: 2.5rem;
+      .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 3rem 0.75rem;
       }
 
       .hero-subtitle {
-        font-size: 1.2rem;
+        padding: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        padding: 0 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .hero {
+        padding: 2.5rem 0.5rem;
       }
     }
   `]
