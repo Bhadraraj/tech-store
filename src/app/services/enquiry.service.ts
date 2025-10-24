@@ -7,7 +7,7 @@ import { Enquiry, EnquiryResponse } from '../models/enquiry.model';
   providedIn: 'root'
 })
 export class EnquiryService {
-  private apiUrl = 'http://localhost:3000/api/enquiries';
+  private apiUrl = 'https://tech-store-api.vercel.app/api';
 
   constructor(private http: HttpClient) {}
 
